@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let queue of dataQueue.persons">
+        <th scope="row">
+            {{ queue.id }}
+        </th>
+        <td>{{ queue.name }}</td>
+        <td>{{ queue.lastname }}</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>

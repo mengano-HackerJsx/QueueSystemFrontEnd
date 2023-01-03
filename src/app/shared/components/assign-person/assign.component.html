@@ -1,0 +1,35 @@
+<h1>Asignar persona a cola</h1>
+<hr>
+<form [formGroup]="assignForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Linea</mat-label>
+        <mat-select formControlName="queue" style="width: 90%;" >
+            <mat-option *ngFor="let item of queues" [value]="item.id">
+                {{ 
+                    item.queueName
+                }}
+            </mat-option>
+          </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Persona</mat-label>
+        <mat-select formControlName="person" style="width: 90%;" >
+            <mat-option *ngFor="let item of persons" [value]="item.id">
+                {{ 
+                    item.name
+                }}
+            </mat-option>
+          </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Condicion</mat-label>
+        <mat-select formControlName="condition" style="width: 90%;" >
+            <mat-option [value]="0">Ninguna</mat-option>
+            <mat-option [value]="1">Embarazada</mat-option>
+            <mat-option [value]="2">Discapacitado</mat-option>
+          </mat-select>
+    </mat-form-field>
+    <button style="width: 100%;" mat-raised-button color="primary" (click)="createQueue()">Guardar</button>
+</form>

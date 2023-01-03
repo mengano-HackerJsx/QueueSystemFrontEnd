@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+            {{ dataQueue?.id }}
+        </th>
+        <td>{{ dataQueue?.name }}</td>
+        <td>{{ dataQueue?.lastname }}</td>
+        <td>
+          <button mat-raised-button color="primary" (click)="nextPerson(dataQueue?.id)">Siguiente persona</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

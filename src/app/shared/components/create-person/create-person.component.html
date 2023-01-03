@@ -1,0 +1,44 @@
+<h1>Crear persona</h1>
+<hr>
+<form [formGroup]="personForm">
+    <mat-form-field appearance="fill">
+        <mat-label>CEDULA</mat-label>
+        <input style="width: 90%;" matInput formControlName="dni">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>NOMBRES</mat-label>
+        <input style="width: 90%;"  matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>APELLIDOS</mat-label>
+        <input style="width: 90%;"  matInput formControlName="lastname">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>EDAD</mat-label>
+        <input style="width: 90%;"  matInput formControlName="age">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>SEXO</mat-label>
+        <mat-select formControlName="sex" style="width: 90%;" >
+            <mat-option value="1">Hombre</mat-option>
+            <mat-option value="2">Mujer</mat-option>
+          </mat-select>
+        <input style="width: 90%;"  matInput formControlName="sex">
+    </mat-form-field>
+
+     <mat-form-field appearance="fill">
+        <mat-label>ESTATURA</mat-label>
+        <input style="width: 90%;" matInput formControlName="height">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>PESO</mat-label>
+        <input style="width: 90%;"  matInput formControlName="weight">
+    </mat-form-field>
+
+    <button style="width: 100%;" mat-raised-button color="primary" (click)="createPerson()">Guardar</button>
+</form>

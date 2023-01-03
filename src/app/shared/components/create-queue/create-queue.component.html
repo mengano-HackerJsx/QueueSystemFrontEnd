@@ -1,0 +1,15 @@
+<h1>Crear cola</h1>
+<hr>
+<form [formGroup]="queueForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input style="width: 90%;" matInput formControlName="queueName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Descripcion</mat-label>
+        <input style="width: 90%;"  matInput formControlName="description">
+    </mat-form-field>
+
+    <button style="width: 100%;" mat-raised-button color="primary" (click)="createQueue()">Guardar</button>
+</form>
